@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+input = gets
+time = Time.new
+Dir.chdir("#{Dir.home}/drive/Documents/Jjn/") do 
+    File.open('werise.txt', 'a') do |line|
+        line.puts "#{time.strftime('%b/%d/%y, %I:%M%p')}: #{input}\n"
+    end
+end
